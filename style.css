@@ -1,29 +1,27 @@
+CSS
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     margin: 0;
     padding: 0;
 
-    /* พื้นหลังสีรุ้ง */
+    /* เปลี่ยนเป็นพื้นหลังไล่เฉดสีฟ้า */
     background: linear-gradient(
         -45deg,
-        red,
-        orange,
-        yellow,
-        green,
-        cyan,
-        blue,
-        indigo,
-        violet
+        #00c6ff,
+        #0072ff,
+        #0a1128,
+        #1c355e,
+        #00c6ff
     );
     background-size: 400% 400%;
-    animation: rainbowBG 10s ease infinite;
+    animation: blueBG 12s ease infinite; /* ปรับแอนิเมชันให้อารมณ์เหมือนคลื่นน้ำทะเล */
 
     color: #333;
 }
 
-/* พื้นหลังสีรุ้งเคลื่อนไหว */
-@keyframes rainbowBG {
+/* พื้นหลังสีฟ้าเคลื่อนไหว */
+@keyframes blueBG {
     0% {
         background-position: 0% 50%;
     }
@@ -35,48 +33,43 @@ body {
     }
 }
 
-/* Header สีรุ้ง */
+/* Header สีฟ้าไล่เฉด */
 header {
     background: linear-gradient(
         90deg,
-        red,
-        orange,
-        yellow,
-        green,
-        cyan,
-        blue,
-        violet
+        #0052d4,
+        #4364f7,
+        #6fb1fc,
+        #4364f7,
+        #0052d4
     );
     background-size: 400% 400%;
-    animation: rainbowBG 5s linear infinite;
+    animation: blueBG 6s linear infinite;
 
     color: white;
     padding: 20px 0;
     text-align: center;
 }
 
-/* ตัวอักษรสีรุ้ง */
+/* ตัวอักษรหัวข้อไล่เฉดสีฟ้า (Metallic Blue) */
 header h1 {
     font-size: 3rem;
     background: linear-gradient(
         90deg,
-        red,
-        orange,
-        yellow,
-        green,
-        cyan,
-        blue,
-        violet
+        #00d2ff,
+        #0066ff,
+        #a6c1ee,
+        #00d2ff
     );
     background-size: 400%;
-    animation: rainbowText 3s linear infinite;
+    animation: blueText 4s linear infinite;
 
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
-/* ตัวหนังสือสีรุ้ง */
-@keyframes rainbowText {
+/* แอนิเมชันตัวหนังสือวิ่ง */
+@keyframes blueText {
     0% {
         background-position: 0%;
     }
@@ -91,8 +84,10 @@ section {
     margin: 20px auto;
     max-width: 800px;
 
-    background: rgba(255, 255, 255, 0.9);
+    /* ปรับพื้นหลังขาวโปร่งแสงให้เข้ากับธีมฟ้า */
+    background: rgba(255, 255, 255, 0.92);
     border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 114, 255, 0.15); /* เพิ่มเงาสีฟ้าจางๆ */
 
     animation: float 3s ease-in-out infinite;
     transition: all 0.3s ease;
@@ -112,46 +107,41 @@ section {
 }
 
 section:hover {
-    transform: scale(1.05) rotate(1deg);
+    transform: scale(1.03) rotate(0.5deg); /* ลดการเอียงลงเล็กน้อยเพื่อให้ดูสมูทขึ้น */
 }
 
-/* หัวข้อสีรุ้ง */
+/* หัวข้อ h2, h3 ไล่เฉดสีฟ้า */
 h2,
 h3 {
     background: linear-gradient(
         90deg,
-        red,
-        orange,
-        yellow,
-        green,
-        cyan,
-        blue,
-        violet
+        #0052d4,
+        #4364f7,
+        #00c6ff,
+        #0052d4
     );
     background-size: 400%;
-    animation: rainbowText 3s linear infinite;
+    animation: blueText 4s linear infinite;
 
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
-/* Footer สีรุ้ง */
+/* Footer สีฟ้าเข้าชุดกับ Header */
 footer {
     text-align: center;
     padding: 15px;
 
     background: linear-gradient(
         90deg,
-        red,
-        orange,
-        yellow,
-        green,
-        cyan,
-        blue,
-        violet
+        #0052d4,
+        #4364f7,
+        #6fb1fc,
+        #4364f7,
+        #0052d4
     );
     background-size: 400% 400%;
-    animation: rainbowBG 5s linear infinite;
+    animation: blueBG 6s linear infinite;
 
     color: white;
 }
